@@ -4,12 +4,14 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import Provider from "./context/Context";
 import ApiProvider from "./context/ApiContext";
+import GlobalStyle from './globalStyles';
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Provider>
         <ApiProvider>
+          <GlobalStyle />
           <App />
         </ApiProvider>
       </Provider>
