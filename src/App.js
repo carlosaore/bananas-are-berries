@@ -4,7 +4,7 @@ import PageOne from "./components/page1/Page1";
 import PageTwo from "./components/page2/Page2";
 import PageThree from "./components/page3/Page3";
 import PageFour from "./components/page4/Page4";
-
+import Dashboard from "./components/page1/Dashboard";
 
 
 const App = () => (
@@ -14,7 +14,7 @@ const App = () => (
       <HomePage />
     </Route>
     <Route exact path="/page1">
-      <PageOne />
+      <Dashboard />
     </Route>
     <Route exact path="/page2">
       <PageTwo />
