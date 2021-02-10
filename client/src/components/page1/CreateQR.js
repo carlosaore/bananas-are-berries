@@ -3,8 +3,6 @@ import Footer from "./../footer/Footer";
 import { Context } from "./../../context/Context";
 import { ApiContext } from "../../context/ApiContext";
 import styled from 'styled-components';
-import logo from "../images/octopus.png";
-import { Link } from "react-router-dom";
 
 const CreateQR = () => (
     <Context.Consumer>
@@ -12,12 +10,7 @@ const CreateQR = () => (
             <ApiContext.Consumer>
                 {(api) => (
                     <SenderWrapper>
-                    <LogoWrapper>
-                    <Link to="/">
-                    <img src={logo} alt="Octopus-Logo" />
-                    </Link>
-                    <h4>MAILIO</h4>
-                    </LogoWrapper>
+                    
                     <MessageWrapper>
                     <NameWrapper>
                     <h3>Full Name:</h3>
@@ -43,7 +36,7 @@ const CreateQR = () => (
 );
 
 const SenderWrapper = styled.div`
- background-image: linear-gradient(180deg, rgba(74, 207, 150, .9), rgb(45, 166, 232, .9));
+ ${'' /* background-image: linear-gradient(180deg, rgba(74, 207, 150, .9), rgb(45, 166, 232, .9)); */}
  height:100vh;`
 
 
@@ -123,5 +116,6 @@ h3 {
         box-shadow: 10px 10px 20px 10px rgba(0,0,0,.1)
     }
 `
+
 
 export default CreateQR;

@@ -1,16 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import SwipeableViews from 'react-swipeable-views';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import PageOne from './Page1';
-import logo from "../images/octopus.png";
+import CreateQR from './CreateQR';
+import SavedMessages from './SavedMessages';
+import QrCode from './QrCode';
 import styled from 'styled-components';
-
+import logo from "../images/octopus.png";
+import { Link } from "react-router-dom";
+import './styles.css'
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -19,8 +21,8 @@ function TabPanel(props) {
     <div
       role="tabpanel"
       hidden={value !== index}
-      id={`full-width-tabpanel-${index}`}
-      aria-labelledby={`full-width-tab-${index}`}
+      id={`simple-tabpanel-${index}`}
+      aria-labelledby={`simple-tab-${index}`}
       {...other}
     >
       {value === index && (
@@ -40,78 +42,66 @@ TabPanel.propTypes = {
 
 function a11yProps(index) {
   return {
-    id: `full-width-tab-${index}`,
-    'aria-controls': `full-width-tabpanel-${index}`,
+    id: `simple-tab-${index}`,
+    'aria-controls': `simple-tabpanel-${index}`,
   };
 }
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    // flexGrow: 1,
     backgroundColor: theme.palette.background.paper,
-    width: 500,
+    
   },
 }));
 
-export default function FullWidthTabs() {
+export default function SimpleTabs() {
   const classes = useStyles();
-  const theme = useTheme();
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
-  const handleChangeIndex = (index) => {
-    setValue(index);
-  };
-
   return (
-    <div className={classes.root}>
-      <AppBar position="static" color="default">
-        <Tabs
-          value={value}
-          onChange={handleChange}
-          indicatorColor="primary"
-          textColor="primary"
-          variant="Width"
-          aria-label="full width tabs example"
-        >
-          <Tab label="Item One" {...a11yProps(0)} />
-          <Tab label="Item Two" {...a11yProps(1)} />
-          <Tab label="Item Three" {...a11yProps(2)} />
+    <div>
+    <LogoWrapper>
+    <Link to="/">
+     <img src={logo} alt="Octopus-Logo" />
+    </Link>
+    <h4>MAILIO</h4>
+   </LogoWrapper>
+      <AppBar position="static" color='transparent'>
+        <Tabs value={value} onChange={handleChange} aria-label="simple tabs example" className={classes.tabs}>
+          <Tab label="Generate QR" {...a11yProps(0)} className='tab'/>
+          <Tab label="Saved Messages" {...a11yProps(1)} className='tab'/>
+          <Tab label="Decode" {...a11yProps(2)} className='tab'/>
         </Tabs>
       </AppBar>
-      <SwipeableViews
-        axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
-        index={value}
-        onChangeIndex={handleChangeIndex}
-      >
-        <TabPanel value={value} index={0} dir={theme.direction}>
-          <PageOne/>
-        </TabPanel>
-        <TabPanel value={value} index={1} dir={theme.direction}>
-          Item Two
-        </TabPanel>
-        <TabPanel value={value} index={2} dir={theme.direction}>
-          Item Three
-        </TabPanel>
-      </SwipeableViews>
+      <TabPanel value={value} index={0} >
+       <CreateQR/>
+      </TabPanel>
+      <TabPanel value={value} index={1}>
+       <SavedMessages/>
+      </TabPanel>
+      <TabPanel value={value} index={2}>
+        <QrCode/>
+      </TabPanel>
     </div>
   );
 }
 
-
 const LogoWrapper = styled.div`
 display:flex;
 flex-direction:row;
-justify-content:center;
+justify-content:flex-start;
 text-align:center;
-align-items:center;
+
 
     img {
         width:50px;
         height:auto;
-        margin-right:5px;
+        margin:10px;
 
     }
     h4{
