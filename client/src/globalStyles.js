@@ -10,6 +10,7 @@ const GlobalStyle = createGlobalStyle`
         sans-serif;
         -webkit-font-smoothing : antialiased;
         -moz-osx-font-smoothing : grayscale;
+        background-image: linear-gradient(180deg, rgba(74, 207, 150, .9), rgb(45, 166, 232, .9));
     }
 `;
  
