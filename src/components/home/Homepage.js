@@ -58,7 +58,7 @@ align-items:center;
 
     button{
         width:200px;
-        height:50px;
+        height:55px;
         margin: 15px 0;
         border-radius:10px;
         border:0;
