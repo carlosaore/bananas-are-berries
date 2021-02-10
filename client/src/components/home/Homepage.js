@@ -37,12 +37,12 @@ align-items:center;
     img {
         width:230px;
         height:auto;
-        margin-top:40px;
+        margin-top:100px;
 
     }
     h1{
         color:white;
-        margin-bottom:30px;
+        margin-bottom:40px;
     }
 
    
@@ -80,7 +80,7 @@ img{
     width:90px;
     right:0;
     bottom:0;
-    margin:20px 10px 15px 20px;
+    margin:80px 10px 15px 20px;
 }
 
 `

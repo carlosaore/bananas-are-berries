@@ -6,14 +6,18 @@ import styled from 'styled-components';
 import logo from "../images/octopus.png";
 import { Link } from "react-router-dom";
 
-const PageOne = () => (
+const CreateQR = () => (
     <Context.Consumer>
         {(value) => (
             <ApiContext.Consumer>
                 {(api) => (
                     <SenderWrapper>
-                    
-                    {/* <Navbar/> */}
+                    <LogoWrapper>
+                    <Link to="/">
+                    <img src={logo} alt="Octopus-Logo" />
+                    </Link>
+                    <h4>MAILIO</h4>
+                    </LogoWrapper>
                     <MessageWrapper>
                     <NameWrapper>
                     <h3>Full Name:</h3>
@@ -120,4 +124,4 @@ h3 {
     }
 `
 
-export default PageOne;
+export default CreateQR;
