@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import styled from 'styled-components';
+import DecodeQr from './decode-qr/DecodeQr';
 
 
 const qrNumber = Math.floor((Math.random()*1000000)+1);
@@ -21,7 +22,8 @@ export default function QrCode() {
                         <p>• Open camera again to rescan code</p>
                     </Instructions>
                     <QR>
-                    {expanded ? <img src='https://www.kaspersky.com/content/en-global/images/repository/isc/2020/9910/a-guide-to-qr-codes-and-how-to-scan-qr-codes-2.png'/> : null}
+                    {/* {expanded ? <img src='https://www.kaspersky.com/content/en-global/images/repository/isc/2020/9910/a-guide-to-qr-codes-and-how-to-scan-qr-codes-2.png'/> : null} */}
+                    {expanded ? <DecodeQr/> : null}
                     </QR>
                     <ButtonWrapper>
                         <button onClick={expand}>Camera</button>
@@ -41,9 +43,9 @@ const QrWrapper = styled.div`
 const QR = styled.div`
 display:flex;
 flex-direction:column;
-justify-content:center;
-text-align:center;
-align-items:center;
+/* justify-content:center; */
+/* text-align:center; */
+/* align-items:center; */
 
 img{
     width:300px;
