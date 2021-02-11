@@ -36,7 +36,9 @@ export default function SendMessageList() {
 }
 
 const SavedMessagesWrapper = styled.div`
-   
+     background-color: linear-gradient(180deg, rgb(74, 207, 150), rgb(45, 166, 232));
+    background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+  height:100vh;
  `
 
 const LogoWrapper = styled.div`
