@@ -122,5 +122,4 @@ h3 {
     }
 `
 
-
 export default CreateQR;

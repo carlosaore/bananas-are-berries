@@ -6,13 +6,14 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import CreateQR from './CreateQR';
-import SavedMessages from './SavedMessages';
-import QrCode from './QrCode';
 import styled from 'styled-components';
 import logo from "../images/octopus.png";
 import { Link } from "react-router-dom";
-import './styles.css'
+import SendMessageList from './SendMessageList';
+import ReceivedMessagesList from './ReceivedMessagesList';
+import './styles.css';
+import ScanQR from './ScanQR'
+import MessagesToSend from './MessagesToSend';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -72,20 +73,20 @@ export default function SimpleTabs() {
     <h4>MAILIO</h4>
    </LogoWrapper>
       <AppBar position="static" color='transparent'>
-        <Tabs centered value={value} onChange={handleChange} aria-label="simple tabs example" centered>
-          <Tab label="Generate QR" {...a11yProps(0)} className='tab'/>
-          <Tab label="Saved Messages" {...a11yProps(1)} className='tab'/>
-          <Tab label="Decode" {...a11yProps(2)} className='tab'/>
+        <Tabs centered value={value} onChange={handleChange} aria-label="simple tabs example" className={classes.tabs}>
+          <Tab  label="Scan QR" {...a11yProps(0)} className='tab'/>
+          <Tab  label="Send " {...a11yProps(1)} className='tab'/>
+          <Tab  label="Received " {...a11yProps(2)} className='tab'/>
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0} >
-       <CreateQR/>
+       <ScanQR/>
       </TabPanel>
       <TabPanel value={value} index={1}>
-       <SavedMessages/>
+      <SendMessageList/>
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <QrCode/>
+        <ReceivedMessagesList/>
       </TabPanel>
     </div>
   );
