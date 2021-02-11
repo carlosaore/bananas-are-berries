@@ -4,6 +4,7 @@ import PageTwo from "./components/page2/Page2";
 import PageThree from "./components/page3/CreateQR3";
 import PageFour from "./components/page4/Page4";
 import Dashboard from "./components/page1/Dashboard";
+import Dashboard2 from "./components/page2/Dashboard2";
 
 const App = () => (
   /* NOTE. IF YOU WANT TO CHANGE THE LINK: CHANGE IT HERE AND INSIDE LINK IN NAVBAR.JS */
@@ -15,7 +16,7 @@ const App = () => (
       <Dashboard />
     </Route>
     <Route exact path="/page2">
-      <PageTwo />
+      <Dashboard2 />
     </Route>
     <Route exact path="/page3">
       <PageThree />

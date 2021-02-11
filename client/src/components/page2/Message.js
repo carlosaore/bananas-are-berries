@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const qrNumber = Math.floor((Math.random()*1000000)+1);
 
-export default function QrCode() {
+export default function Message() {
     return (
         <QrWrapper>
                     <QR>
@@ -12,6 +12,7 @@ export default function QrCode() {
                     <img src='https://www.kaspersky.com/content/en-global/images/repository/isc/2020/9910/a-guide-to-qr-codes-and-how-to-scan-qr-codes-2.png'/>
                     </QR>
                     <ButtonWrapper>
+                        <button>Go Back</button>
                         <button>Save QR</button>
                     </ButtonWrapper>
         </QrWrapper>

@@ -37,7 +37,7 @@ const CreateQR3 = () => (
                        />
                     </NameWrapper>
                     <PhoneWrapper>
-                    <h3>Phone Number:</h3>
+                    <h3>Camp Leader Number:</h3>
                     <PhoneInput
                             country={'us'}
                             // value={this.state.phone}
