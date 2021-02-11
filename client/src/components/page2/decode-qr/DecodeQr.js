@@ -29,16 +29,23 @@ const DecodeQr = () => {
             {/* <Button className="btn" variant="contained"
             onClick={onScanQr}> DECODE MESSAGE </Button> */}
 
-            <QrReader
+            {/* <QrReader
             ref={qrRef}
             delay={300}
             onError={handleError}
             onScan={handleScan}
             style={{ width: '100%' }}
             // legacyMode
-            />
+            /> */}
 
-            <p> {scanResultQr} </p>
+            <p> { !scanResultQr ? <QrReader
+            ref={qrRef}
+            delay={300}
+            onError={handleError}
+            onScan={handleScan}
+            style={{ width: '100%' }}
+            // legacyMode
+            /> :  <p>{scanResultQr}</p>} </p>
         </div>
         </StyledDecodeQrForm>
     )
@@ -47,11 +54,6 @@ const StyledDecodeQrForm = styled.div `
 .scan__qr__form {
     margin: 10px;
 }
-p {
-    height: 200px;
-    border: 1px solid black;
-    border-radius: 2px;
-    padding: 10px;
-}
+
 `
 export default DecodeQr;
