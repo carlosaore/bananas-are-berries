@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import DecodeQr from '../page2/decode-qr/DecodeQr';
 
 
 const qrNumber = Math.floor((Math.random()*1000000)+1);
@@ -9,7 +10,8 @@ export default function QrCode() {
         <QrWrapper>
                     <QR>
                     <h2>QR Code ID: {qrNumber}</h2>
-                    <img src='https://www.kaspersky.com/content/en-global/images/repository/isc/2020/9910/a-guide-to-qr-codes-and-how-to-scan-qr-codes-2.png'/>
+                    {/* <img src='https://www.kaspersky.com/content/en-global/images/repository/isc/2020/9910/a-guide-to-qr-codes-and-how-to-scan-qr-codes-2.png'/> */}
+                    <DecodeQr/>
                     </QR>
                     <ButtonWrapper>
                         <button>Save QR</button>
@@ -30,7 +32,7 @@ display:flex;
 flex-direction:column;
 justify-content:center;
 text-align:center;
-align-items:center;
+/* align-items:center; */
 
 img{
     width:300px;
