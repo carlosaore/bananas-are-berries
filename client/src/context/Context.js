@@ -4,11 +4,11 @@ export const Context = React.createContext();
 
 class Provider extends Component {
     state = {
-        example: "example",
+        sendStatus: false,
     };
 
-    test = () => {
-        console.log(this.state.example);
+    send = () => {
+        this.setState({sendStatus: !this.state.sendStatus});
     };
 
     render() {
@@ -16,7 +16,7 @@ class Provider extends Component {
             <Context.Provider
                 value={{
                     state: this.state,
-                    test: this.test,
+                    send: this.send,
                     /* if you write new functions write them here as i did with the test function */
                 }}
             >

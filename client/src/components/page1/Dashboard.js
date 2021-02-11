@@ -72,7 +72,7 @@ export default function SimpleTabs() {
     <h4>MAILIO</h4>
    </LogoWrapper>
       <AppBar position="static" color='transparent'>
-        <Tabs value={value} onChange={handleChange} aria-label="simple tabs example" className={classes.tabs}>
+        <Tabs value={value} onChange={handleChange} aria-label="simple tabs example" centered>
           <Tab label="Generate QR" {...a11yProps(0)} className='tab'/>
           <Tab label="Saved Messages" {...a11yProps(1)} className='tab'/>
           <Tab label="Decode" {...a11yProps(2)} className='tab'/>
