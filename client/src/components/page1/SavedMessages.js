@@ -26,6 +26,9 @@ export default function SavedMessages() {
 
 const SavedMessagesWrapper = styled.div`
     height:100vh;
+    background-color: linear-gradient(180deg, rgb(74, 207, 150), rgb(45, 166, 232));
+    background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+
  `
 
 const Card = styled.div`
