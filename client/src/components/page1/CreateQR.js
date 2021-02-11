@@ -1,24 +1,34 @@
 import Navbar from "./../navbar/Navbar";
 import Footer from "./../footer/Footer";
-import { Context } from "./../../context/Context";
+import { Context } from "../../context/Context";
 import { ApiContext } from "../../context/ApiContext";
 import styled from 'styled-components';
 import PhoneInput from 'react-phone-input-2'
-import 'react-phone-input-2/lib/style.css'
+import 'react-phone-input-2/lib/style.css';
+import logo from "../images/octopus.png";
+import { Link } from "react-router-dom";
+import 'react-phone-input-2/lib/style.css';
+import GeneratedQR from './GeneratedQR'
 
 const CreateQR = () => (
     <Context.Consumer>
-        {(value) => (
+         {(value) => (
             <ApiContext.Consumer>
                 {(api) => (
-                    <SenderWrapper>    
-                    <MessageWrapper>
+                
+                    <SenderWrapper>
+                    
+                    {
+                        !value.state.sendStatus &&
+
+                        <MessageWrapper>
                     <NameWrapper>
-                    <h3>Full Name:</h3>
-                        <input type='text'/>
+                    
+                    <h3>Recipient Name:</h3>
+                    <input type='text'/>
                     </NameWrapper>
                     <PhoneWrapper>
-                    <h3>Phone Number:</h3>
+                    <h3>Recipient Number:</h3>
                     <PhoneInput
                             country={'us'}
                             // value={this.state.phone}
@@ -29,11 +39,21 @@ const CreateQR = () => (
                     <h3>Message:</h3>
                         <textarea />
                     </TextWrapper>
-                    </MessageWrapper>
                     <ButtonWrapper>
-                        <button>Generate QR</button>
+                        <button onClick={value.send}>Generate QR</button>
                     </ButtonWrapper>
+                    </MessageWrapper>
+                 
+                    }
+                    {
+                        value.state.sendStatus &&
+                        <GeneratedQR/>
+                    }
+                    
+
                     </SenderWrapper>
+                
+                    
                 )}
             </ApiContext.Consumer>
         )}
@@ -41,7 +61,8 @@ const CreateQR = () => (
 );
 
 const SenderWrapper = styled.div`
- ${'' /* background-image: linear-gradient(180deg, rgba(74, 207, 150, .9), rgb(45, 166, 232, .9)); */}
+    background-color: linear-gradient(180deg, rgb(74, 207, 150), rgb(45, 166, 232));
+    background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
  height:100vh;`
 
 
