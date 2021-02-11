@@ -1,7 +1,7 @@
 import { Switch, Route } from "react-router-dom";
 import HomePage from "./components/home/Homepage";
 import PageTwo from "./components/page2/Page2";
-import PageThree from "./components/page3/Page3";
+import PageThree from "./components/page3/CreateQR3";
 import PageFour from "./components/page4/Page4";
 import Dashboard from "./components/page1/Dashboard";
 

@@ -3,22 +3,27 @@ import Footer from "./../footer/Footer";
 import { Context } from "./../../context/Context";
 import { ApiContext } from "../../context/ApiContext";
 import styled from 'styled-components';
+import PhoneInput from 'react-phone-input-2'
+import 'react-phone-input-2/lib/style.css'
 
 const CreateQR = () => (
     <Context.Consumer>
         {(value) => (
             <ApiContext.Consumer>
                 {(api) => (
-                    <SenderWrapper>
-                    
+                    <SenderWrapper>    
                     <MessageWrapper>
                     <NameWrapper>
                     <h3>Full Name:</h3>
-                        <input />
+                        <input type='text'/>
                     </NameWrapper>
                     <PhoneWrapper>
                     <h3>Phone Number:</h3>
-                        <input />
+                    <PhoneInput
+                            country={'us'}
+                            // value={this.state.phone}
+                            // onChange={phone => this.setState({ phone })}
+                       />
                     </PhoneWrapper>
                     <TextWrapper>
                     <h3>Message:</h3>
