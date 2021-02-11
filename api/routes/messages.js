@@ -9,14 +9,14 @@ router.get('/', function (req, res, next) {
 });
 router.post('/', function (req, res, next) {
   const message = new Message({
-    senderNumber: 34343,
-    recepientNumber: 343434,
-    status: 'NEW',
-    message: 'hello i am message',
-    chiefId: 'chief1'
+    senderNumber: req.body.senderNumber,
+    recepientNumber: req.body.recepientNumber,
+    status: req.body.status,
+    message: req.body.message,
+    chiefId: req.body.chiefId
   });
   console.log(message);
   message.save();
-  res.send('working with / blalalfmalkf');
+  res.send('Message saved');
 });
 module.exports = router;
