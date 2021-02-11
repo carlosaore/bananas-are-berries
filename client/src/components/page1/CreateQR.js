@@ -5,7 +5,6 @@ import { ApiContext } from "../../context/ApiContext";
 import styled from 'styled-components';
 import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
-import GeneQr from "./gene-qr/GeneQr";
 
 const CreateQR = () => (
     <Context.Consumer>
@@ -27,13 +26,12 @@ const CreateQR = () => (
                        />
                     </PhoneWrapper>
                     <TextWrapper>
-                        <GeneQr/>
-                    {/* <h3>Message:</h3>
-                        <textarea /> */}
+                    <h3>Message:</h3>
+                        <textarea />
                     </TextWrapper>
                     </MessageWrapper>
                     <ButtonWrapper>
-                        {/* <button>Generate QR</button> */}
+                        <button>Generate QR</button>
                     </ButtonWrapper>
                     </SenderWrapper>
                 )}
