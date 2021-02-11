@@ -17,6 +17,6 @@ router.post('/', function (req, res, next) {
   });
   console.log(message);
   message.save();
-  res.send('Message saved');
+  res.send('working');
 });
 module.exports = router;
