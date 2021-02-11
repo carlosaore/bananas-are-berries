@@ -29,27 +29,28 @@ const CreateQR3 = () => (
                     <h4>Send encoded message</h4>
                     <NameWrapper>
                     
-                    <h3>Recipient Number:</h3>
-                         <PhoneInput
-                            country={'us'}
-                            // value={this.state.phone}
-                            // onChange={phone => this.setState({ phone })}
+                    <h3>Recipient Name:</h3>
+                         <input
+                           type='text'
+                            value={value.state.name}
+                            onChange={value.handleName}
                        />
                     </NameWrapper>
                     <PhoneWrapper>
                     <h3>Camp Leader Number:</h3>
-                    <PhoneInput
-                            country={'us'}
-                            // value={this.state.phone}
-                            // onChange={phone => this.setState({ phone })}
+                    <input
+                            type='number'
+                            value={value.state.to}
+                            onChange={value.handleNumber}
                        />
                     </PhoneWrapper>
                     <TextWrapper>
                     <h3>Message:</h3>
-                        <textarea />
+                        <textarea value={value.state.message}
+                            onChange={value.handleMessage} />
                     </TextWrapper>
                     <ButtonWrapper>
-                        <button onClick={value.send}>Send</button>
+                        <button onClick={value.handleSubmit}>Send</button>
                     </ButtonWrapper>
                     </MessageWrapper>
                  
