@@ -19,7 +19,8 @@ export default function QrCode() {
 }
 
 const QrWrapper = styled.div`
-${'' /* background-image: linear-gradient(180deg, rgba(74, 207, 150, .9), rgb(45, 166, 232, .9)); */}
+    background-color: linear-gradient(180deg, rgb(74, 207, 150), rgb(45, 166, 232));
+    background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
 height:100vh;
  `
 

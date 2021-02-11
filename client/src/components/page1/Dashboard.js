@@ -12,7 +12,8 @@ import QrCode from './QrCode';
 import styled from 'styled-components';
 import logo from "../images/octopus.png";
 import { Link } from "react-router-dom";
-import './styles.css'
+import './styles.css';
+import GeneratedQR from './GeneratedQR'
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -92,6 +93,9 @@ export default function SimpleTabs() {
 }
 
 const LogoWrapper = styled.div`
+    background-color: linear-gradient(180deg, rgb(74, 207, 150), rgb(45, 166, 232));
+    background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+
 display:flex;
 flex-direction:row;
 justify-content:center;
