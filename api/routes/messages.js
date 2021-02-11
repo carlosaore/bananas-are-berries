@@ -3,7 +3,7 @@ const router = express.Router();
 const Message = require('../models/messages');
 /* GET messages */
 router.get('/', function (req, res, next) {
-  Message.find({}     , function (err, docs) {
+  Message.find({}, function (err, docs) {
     res.send(docs);
   })
 });
