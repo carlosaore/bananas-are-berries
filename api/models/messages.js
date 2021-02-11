@@ -1,10 +1,10 @@
-const mongoose = require('mongoose');
 
-const Schema = mongoose.Schema;
-const ObjectId = Schema.ObjectId;
 
-const Message = new Schema({
-  id: ObjectId,
+const mongoose = require("mongoose");
+// const ObjectId = mongoose.Schema.ObjectId;
+
+const MessageSchema = new mongoose.Schema({
+  // id: ObjectId,
   senderNumber: Number,
   recepientNumber: Number,
   date: {type: Date, default: Date.now},
@@ -12,3 +12,5 @@ const Message = new Schema({
   message: String, 
   chiefId: String
 });
+
+module.exports = mongoose.model("Message", MessageSchema);
