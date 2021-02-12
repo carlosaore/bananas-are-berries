@@ -10,9 +10,16 @@ import react, {useState} from 'react'
 
 export default function SendMessageList() {
 
+    const [showSent, setShowSent] = useState(false)
+
+        function confirmSent() {
+            setShowSent(true)
+        }
 
     return (
         <SavedMessagesWrapper>
+           {!showSent ? 
+           <CardWrapper>
             <Card>
             <h3>Message 1</h3>    
             </Card> 
@@ -27,9 +34,11 @@ export default function SendMessageList() {
             </Card>  
             <Card>
             <h3>Message 5</h3>    
-            </Card> 
+            </Card>
+            </CardWrapper> 
+            : <h4>Thank You. The Encrypted Messages on your phone have been sent to the relevant recipients.</h4>}
             <ButtonWrapper>
-                        <button>Send Messages</button>
+                        <button onClick={confirmSent}>Send Messages</button>
                     </ButtonWrapper> 
         </SavedMessagesWrapper>
     )
@@ -39,6 +48,12 @@ const SavedMessagesWrapper = styled.div`
      background-color: linear-gradient(180deg, rgb(74, 207, 150), rgb(45, 166, 232));
     background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
   height:100vh;
+
+  h4 {
+      color:white;
+      text-align:center;
+      font-size:18px;
+  }
  `
 
 const LogoWrapper = styled.div`
@@ -103,5 +118,8 @@ button {
 }
 
 `
+const CardWrapper = styled.div``
+
+
 
 const Inbox = styled.div``

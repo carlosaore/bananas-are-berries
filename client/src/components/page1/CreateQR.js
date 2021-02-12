@@ -84,7 +84,7 @@ input{
     width:280px;
     height:30px;
     border:0;
-    background-color:rgb(230, 230, 230);
+    background-color:rgb(245, 245, 245);
         border-radius:5px;
     box-shadow: 10px 10px 20px 10px rgba(0,0,0,.1)
 }
@@ -137,7 +137,7 @@ h3 {
         width:280px;
         height:220px;
         border:0;
-        background-color:rgb(230, 230, 230);
+        background-color:rgb(245, 245, 245);
         border-radius:5px;
         box-shadow: 10px 10px 20px 10px rgba(0,0,0,.1)
     }
