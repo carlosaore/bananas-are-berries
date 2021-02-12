@@ -31,3 +31,16 @@ The app allows you to create a QR code that contains an encoded message (right t
 The app allows you to create a QR code that contains an encoded message (right to privacy). That message can then be scanned by someone that has internet access so it can be sent. The app also allows anyone else to send a message back, by storing the response offline, as a QR code that can then be scanned by the refugee with the app, decoded, and displayed.
 
 
+
+### Installation
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/your_username_/Project-Name.git
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+
+
