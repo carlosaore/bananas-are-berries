@@ -9,6 +9,13 @@ const caesar = require('./caesar');
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
+// This Route is when the chief sends the encoded messages
+// to the final recipients (the family member fam) by decoding them
+// and asking twilio to send a whatsapp message.
+// The encoded messages where originated in the bob's phone
+// as QR codes that chief scanned 
+
+
 //Check for auth to use server
 
 //Check that it's a POST request
