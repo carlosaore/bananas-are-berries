@@ -19,7 +19,7 @@ const CreateQR = () => (
                     <SenderWrapper>
                     
                     {
-                        !value.state.sendStatus &&
+                        !value.state.sendQRcode &&
 
                         <MessageWrapper>
                     <NameWrapper>
@@ -40,13 +40,13 @@ const CreateQR = () => (
                         <textarea />
                     </TextWrapper>
                     <ButtonWrapper>
-                        <button onClick={value.send}>Generate QR</button>
+                        <button onClick={value.sendQR}>Generate QR</button>
                     </ButtonWrapper>
                     </MessageWrapper>
                  
                     }
                     {
-                        value.state.sendStatus &&
+                        value.state.sendQRcode &&
                         <GeneratedQR/>
                     }
                     
