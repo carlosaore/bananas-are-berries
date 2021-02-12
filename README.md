@@ -1,4 +1,4 @@
-# WCS Hackaton 2 
+# WCS Hackaton 2 A social impact with Twilio
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 
