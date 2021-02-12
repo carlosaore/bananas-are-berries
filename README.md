@@ -42,5 +42,9 @@ The app allows you to create a QR code that contains an encoded message (right t
    ```sh
    npm install
    ```
+3. Run
+   ```sh
+   npm start
+   ```
 
 
