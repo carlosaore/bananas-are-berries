@@ -9,18 +9,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ### Project Members
 [Carlos]()[Roxana]()[Viet]()[Aya]()
 
-### Mailio: a simple mailman     
+### Mailio: a simple mailman  
+The app is an internet-capable mailman bot. Anyone with a phone can use it or lend it to create messages.
 
-### What does this project do?
+### Who did we design this project for?
+Refugge people with no internet connection.
 
-### Who did you design this project for?
 
-### What was your inspiration for this project?
-
-### What challenges did you run into?
-
-### What accomplishments are you most proud of?
-
-### If you had more time, what features would you add to this project?
-
-### What did your team learn?
