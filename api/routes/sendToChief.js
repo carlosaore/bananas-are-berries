@@ -28,7 +28,7 @@ router.use(function (req, res, next) {
 router.use(function (req, res, next) {
     if (!req.body.name || !req.body.to || !req.body.message) {
         res.status(400).json({
-            error : "missing data"
+            error : "Missing data. Body must include \"name\", \"to\", and \"message\" "
         });
         return
     };
@@ -42,27 +42,29 @@ router.use(function (req, res, next) {
     const regex = new RegExp("(whatsapp:\+)(\d*)");
     if (!regex.test(req.body.to)) {
         res.status(400).json({
-            error : "incorrect data"
+            error : "Phone number must be provided in correct sintax. Example: whatsapp:+346525600000"
         });
         return
     };
     next();
 });
 
-// Concatenate message
+// Concatenate messages (one for whatsapp and the other one for the QR that contains the actual message)
 router.use(function (req, res, next) {
-    req.message = `${req.body.name} sends this message to ${req.body.to}: ${req.body.message}`;
+    const phoneNumber = req.body.to.replace(/\D/g,"")
+    req.whatsappMessage = `*${req.body.name}* sends this message to *+${phoneNumber}*`;
+    req.qrMessage = `${req.body.name} sends this message to ${phoneNumber}: ${req.body.message}`;
     next();
 });
 
 // Encode message
 router.use(function (req, res, next) {
     // encode
-    req.message = caesar(req.message, 7);
+    req.qrMessage = caesar(req.qrMessage, 7);
     //replace whitespace for %20 for the QR generator
-    req.message = req.message.replace(/ /g,"%20");
+    req.qrMessage = req.qrMessage.replace(/ /g,"%20");
     // save an url for twilio to send as image (QR generator)
-    req.qr = `https://api.qrserver.com/v1/create-qr-code/?data=${req.message}&amp;size=100x100`; 
+    req.qr = `https://api.qrserver.com/v1/create-qr-code/?data=${req.qrMessage}&amp;size=100x100`; 
     next();
 });
 
@@ -71,8 +73,8 @@ router.post('/', function(req, res) {
     client.messages 
       .create({
          from: 'whatsapp:+14155238886',
-         body: `Mailio message from ${req.body.name} to +34652568088`,
-         to: 'whatsapp:+34652568088',
+         body: req.whatsappMessage,
+         to: req.body.to,
          mediaUrl: req.qr
        });
     res.status(200).json({message : "message sent"})

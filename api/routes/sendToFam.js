@@ -28,7 +28,7 @@ router.use(function (req, res, next) {
 router.use(function (req, res, next) {
     if (!req.body.name || !req.body.to || !req.body.message) {
         res.status(400).json({
-            error : "missing data"
+            error : "Missing data. Body must include \"name\", \"to\", and \"message\""
         });
         return
     };
@@ -42,7 +42,7 @@ router.use(function (req, res, next) {
     const regex = new RegExp("(whatsapp:\+)(\d*)");
     if (!regex.test(req.body.to)) {
         res.status(400).json({
-            error : "incorrect data"
+            error : "Phone number must be provided in correct sintax. Example: whatsapp:+346525600000"
         });
         return
     };
@@ -60,7 +60,7 @@ router.post('/', function(req, res) {
     client.messages 
       .create({
          from: 'whatsapp:+14155238886',
-         body: `${req.body.name} sends you this message: ${req.message}`,
+         body: `*${req.body.name}* sends you this message: ${req.message}`,
          to: req.body.to
        });
     res.status(200).json({message : "message sent"})
