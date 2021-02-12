@@ -36,7 +36,7 @@ The app allows you to create a QR code that contains an encoded message (right t
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/carlosaore/mailio.git
    ```
 2. Install NPM packages
    ```sh
