@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 
 ### Project Members
-[Carlos]()<br/>[Roxana]()<br/>[Viet]()<br/>[Aya]()
+[Carlos]()<br/>[Roxana](https://github.com/roxana-florea)<br/>[Viet]()<br/>[Aya](https://github.com/AyaDesigner)
 
 ### Mailio: a simple mailman sending messages from a mobile without internet connection using QR code
 
