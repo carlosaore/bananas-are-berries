@@ -39,7 +39,7 @@ const CreateQR3 = () => (
                     <PhoneWrapper>
                     <h3>Camp Leader Number:</h3>
                     <input
-                            type='number'
+                            type='text'
                             value={value.state.to}
                             onChange={value.handleNumber}
                        />
