@@ -1,7 +1,6 @@
 # WCS Hackaton 2 A social impact with [Twilio](https://www.twilio.com/)
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-
+JavaScript ECMAScript 6  React Redux  Node.js Express PHP  MongoDB  Git NPM  ESLint Prettier  Visual Studio Code  Material UI 
 
 ### Project Members
 [Carlos]()<br/>[Roxana](https://github.com/roxana-florea)<br/>[Viet]()<br/>[Aya](https://github.com/AyaDesigner)
