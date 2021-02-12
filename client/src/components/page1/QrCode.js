@@ -1,20 +1,31 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
 import DecodeQr from '../page2/decode-qr/DecodeQr';
-
-
-const qrNumber = Math.floor((Math.random()*1000000)+1);
+import { Link } from "react-router-dom";
 
 export default function QrCode() {
+
+    const [saveQR, setSaveQR] = useState(false)
+
+    function showSave() {
+        setSaveQR(true)
+    }
+
     return (
         <QrWrapper>
-                    <QR>
-                    <h2>QR Code ID: {qrNumber}</h2>
-                    {/* <img src='https://www.kaspersky.com/content/en-global/images/repository/isc/2020/9910/a-guide-to-qr-codes-and-how-to-scan-qr-codes-2.png'/> */}
-                    <DecodeQr/>
-                    </QR>
+                {!saveQR ? 
+                <DecodeWrapper>
+                <QR>
+                <h2>Please Scan a QR code to view Message</h2>
+                </QR>
+                <DecodeQr/>
+                </DecodeWrapper>
+                : 
+                <h3>Your QR Message has been saved. </h3> 
+                }
                     <ButtonWrapper>
-                        <button>Save QR</button>
+                    <Link to='/'> <button >Go Back</button></Link>
+                            <button onClick={showSave}>Save QR</button>
                     </ButtonWrapper>
         </QrWrapper>
     )
@@ -24,6 +35,8 @@ const QrWrapper = styled.div`
     background-color: linear-gradient(180deg, rgb(74, 207, 150), rgb(45, 166, 232));
     background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
 height:100vh;
+
+h3{color:white};
  `
 
 
@@ -61,4 +74,7 @@ button {
         box-shadow: 10px 10px 30px 20px rgba(0,0,0,.1)
 }
 
+`
+
+const DecodeWrapper = styled.div`
 `

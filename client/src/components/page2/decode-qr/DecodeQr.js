@@ -55,5 +55,10 @@ const StyledDecodeQrForm = styled.div `
     margin: 10px;
 }
 
+p {
+    color:white;
+    font-size:18px;
+    text-align:center
+}
 `
 export default DecodeQr;

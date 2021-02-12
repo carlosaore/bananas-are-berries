@@ -30,9 +30,9 @@ function HomePage() {
             <button placeholder="Login">Login</button>
         </FakeLogin> :
         <ButtonWrapper>
-        <Link to="/page1"><button>I Am Bob</button></Link>
-        <Link to="/page2"><button>I Am Chief</button></Link>
-        <Link to="/page3"><button>I Am Fam</button></Link>
+        <Link to="/page1"><button>Jack</button></Link>
+        <Link to="/page2"><button>Anna</button></Link>
+        <Link to="/page3"><button>Lucy</button></Link>
         </ButtonWrapper>}
         <Partners>
             <img onClick={setDemo} src={twilio} alt="twilio logo" />
@@ -83,7 +83,8 @@ align-items:center;
         border:0;
         background-color:rgb(175, 76, 224);
         color:white;
-        font-size:17px;
+        font-size:19px;
+        font-weight:600;
         box-shadow: 10px 10px 30px 20px rgba(0,0,0,.1)
     }
 `
