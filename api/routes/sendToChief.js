@@ -10,11 +10,11 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
 // This Route is when a family member uses the app to send a message
-// to a bob but it arrives encoded in the chief's whatsapp as a QR code
-// that has encoded text. The message written by the family member must be
-// in body.to.
-// Bob, on the frontside will then use the app to scan the code and will
-// get the encoded text, decode it in his phone and see the message
+// to a bob. It is first encoded in the frontend and the server sends it
+// to the chief's whatsapp as a QR code that has encoded text.
+// The message written by the family member must be in body.to.
+// Then, the Bob, on the frontside will use the app to scan the code and will
+// get the encoded text, decode it in the frontend and see the message.
 
 //Check for auth to use server
 
