@@ -1,5 +1,4 @@
 # WCS Hackaton 2 A social impact with [Twilio](https://www.twilio.com/)
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" title="JavaScript"><img src="https://github.com/tomchen/stack-icons/blob/master/logos/javascript.svg" alt="JavaScript" width="21px" height="21px"></a>
 <a href="https://tc39.es/ecma262/" title="ECMAScript 6"><img src="https://github.com/tomchen/stack-icons/blob/master/logos/es6.svg" alt="ECMAScript 6" width="21px" height="21px"></a>
