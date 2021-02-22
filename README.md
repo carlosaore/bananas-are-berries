@@ -1,3 +1,4 @@
+<p align="center">
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" title="JavaScript"><img src="https://github.com/tomchen/stack-icons/blob/master/logos/javascript.svg" alt="JavaScript" width="21px" height="21px"></a>
 <a href="https://tc39.es/ecma262/" title="ECMAScript 6"><img src="https://github.com/tomchen/stack-icons/blob/master/logos/es6.svg" alt="ECMAScript 6" width="21px" height="21px"></a>
 <a href="https://reactjs.org/" title="React"><img src="https://github.com/tomchen/stack-icons/blob/master/logos/react.svg" alt="React" width="21px" height="21px"></a>
@@ -9,10 +10,11 @@
 <a href="https://babeljs.io/" title="Babel"><img src="https://github.com/tomchen/stack-icons/blob/master/logos/babel.svg" alt="Babel" width="21px" height="21px"></a>
 <a href="https://eslint.org/" title="ESLint"><img src="https://github.com/tomchen/stack-icons/blob/master/logos/eslint.svg" alt="ESLint" width="21px" height="21px"></a>
 <a href="https://prettier.io/" title="Prettier"><img src="https://github.com/tomchen/stack-icons/blob/master/logos/prettier.svg" alt="Prettier" width="21px" height="21px"></a>
+</p>
 
 <br />
 <p align="center">
-  <img src="[./client/src/components/images/octopus.png](https://github.com/carlosaore/mailio/blob/main/client/src/components/images/octopus.png?raw=true)" alt="Logo" width="auto" height="100">
+  <img src="https://github.com/carlosaore/mailio/blob/main/client/src/components/images/octopus.png?raw=true" alt="Logo" width="auto" height="150">
   <h1 align="center">WCS Hackaton 2: A social impact with <a href="https://www.twilio.com/">Twilio</a> and <a href="https://www.wildcodeschool.com/">Wild Code School</a></h1>
 
   <p align="center">
@@ -96,9 +98,7 @@ The following lists depict the three main use cases of the app:
 
 
 <details><summary>The following scheme shows the flow of the application:</summary>
-<p>
-test
-</p>
+<img src="https://github.com/carlosaore/mailio/blob/main/Mailio.png?raw=true" alt="Logo" width="100%">
 </details>
 
 <br>
