@@ -15,7 +15,7 @@
 <br />
 <p align="center">
   <img src="https://github.com/carlosaore/mailio/blob/main/client/src/components/images/octopus.png?raw=true" alt="Logo" width="auto" height="150">
-  <h1 align="center">WCS Hackaton 2: A social impact with <a href="https://www.twilio.com/">Twilio</a> and <a href="https://www.wildcodeschool.com/">Wild Code School</a></h1>
+  <h1 align="center">WCS Hackaton 2:<br>A social impact with <a href="https://www.twilio.com/">Twilio</a> and <a href="https://www.wildcodeschool.com/">Wild Code School</a></h1>
 
   <p align="center">
     <i>
@@ -103,5 +103,5 @@ The following lists depict the three main use cases of the app:
 
 <br>
 
->**If you want to demo the application, please contact us. The app uses the Twilio sanbox for testing so all the features may not work for you unless we "active" the sandbox first.**
+>**If you want to demo the application, please contact us. The app uses the Twilio sanbox for testing so all the features may not work for you unless we "activate" the sandbox first.**
 
